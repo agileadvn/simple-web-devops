@@ -1,6 +1,6 @@
 <?php
 
-require_once('dirname(__FILE__)/../model/Product.php');
+require_once(dirname(__FILE__) . '/../model/Product.php');
 
 class ProductRepository {
   var $dbConnection;
@@ -10,7 +10,7 @@ class ProductRepository {
 
   function __destruct() {
     if ($this->dbConnection) {
-      $this->dbConnection->close();
+      //$this->dbConnection->close();
     }
   }
 
@@ -41,7 +41,7 @@ class ProductRepository {
   }
 
   function getAllProductsFromDB() {
-    $this->dbConnection = new mysqli('localhost', 'agileadvn', 'agileadvn', 'agileadvn');
+    $this->dbConnection = new mysqli('mysql', 'agileadvn', 'agileadvn', 'agileadvn');
     if($this->dbConnection->connect_errno) {
       return null;
     }
