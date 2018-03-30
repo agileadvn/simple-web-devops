@@ -1,0 +1,13 @@
+version: '3'
+services:
+  php-simple-web:
+    build: .
+    ports:
+      - "80:80"
+  mysql:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=phpsimpleweb
+      - MYSQL_DATABASE=phpsimpleweb
+      - MYSQL_USER=phpsimpleweb
+      - MYSQL_PASSWORD=phpsimpleweb
