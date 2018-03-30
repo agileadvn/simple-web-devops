@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tests>
+  <test className="ProductRepositoryTest" methodName="testMockProducts" prettifiedClassName="ProductRepository" prettifiedMethodName="Mock products" status="0" time="0.00019097328186035" size="-1" groups="default"/>
+  <test className="ProductRepositoryTest" methodName="testMockProductName" prettifiedClassName="ProductRepository" prettifiedMethodName="Mock product name" status="0" time="7.2002410888672E-5" size="-1" groups="default"/>
+  <test className="ProductRepositoryTest" methodName="testMockProductId" prettifiedClassName="ProductRepository" prettifiedMethodName="Mock product id" status="0" time="6.8902969360352E-5" size="-1" groups="default"/>
+</tests>
