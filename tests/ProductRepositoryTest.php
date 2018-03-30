@@ -1,10 +1,9 @@
 <?php
-declare(strict_types=1);
 use PHPUnit\Framework\TestCase;
 
 final class ProductRepositoryTest extends TestCase
 {
-  public function testMockProducts(): void {
+  public function testMockProducts() {
     $productRepository = new ProductRepository();
     $this->assertEquals(
         10,
@@ -12,13 +11,13 @@ final class ProductRepositoryTest extends TestCase
     );
   }
 
-  public function testMockProductName(): void {
+  public function testMockProductName() {
     $items = ['iPhone', 'Macbook', 'Galaxy Note 5', 'iPhone X'];
     $productRepository = new ProductRepository();
     $this->assertContains( $productRepository->getAllMockProducts()[0]->name, $items );
   }
 
-  public function testMockProductId(): void {
+  public function testMockProductId() {
     $productRepository = new ProductRepository();
     $id = $productRepository->getAllMockProducts()[0]->id;
     $this->assertEquals($id > 1000 && $id < 10000 , true);
