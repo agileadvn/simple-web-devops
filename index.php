@@ -3,7 +3,7 @@ require_once 'sentry-php-master/lib/Raven/Autoloader.php';
 Raven_Autoloader::register();
 
 $client = new Raven_Client('https://00872b23f74d4b958e8cf11ae1298493:e4444fe53ad34a0ca556b20215b616eb@sentry.io/931548');
-$error_handler = new Raven_ErrorHandler($sentryClient);
+$error_handler = new Raven_ErrorHandler($client);
 $error_handler->registerExceptionHandler();
 $error_handler->registerErrorHandler();
 $error_handler->registerShutdownFunction();
@@ -52,6 +52,8 @@ $error_handler->registerShutdownFunction();
   </body>
 </html>
 <?php
+require_once('storage/ProductRepository.php');
+$productRepository = new ProductRepository();
 $items = $productRepository->getAllMockProducts();
 if (isset($_GET['type']) && ($_GET['type'] == 'real')) {
   $items = $productRepository->getAllProducts();
