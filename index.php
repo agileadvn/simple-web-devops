@@ -6,8 +6,8 @@
   <body>
     <div>
       <h2>Choose to list all products</h2>
-      <input type="button" id="mock" value="Mock products" />
-      <input type="button" id="real" value="Real products" />
+      <input type="button" id="i-mock" value="i-Mock products" />
+      <input type="button" id="i-real" value="i-Real products" />
       <p />
       <div id="product-list">
       </idv>
