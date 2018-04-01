@@ -33,7 +33,7 @@ class ProductRepository {
     $descs = ['The best product ever', 'Flagship of year', 'Welcome to the world of modern citizen', 'Nothing can beat'];
 
     $product = new Product();
-    $product->id = rand(100, 1000);
+    $product->id = rand(1000, 10000);
     $product->name = $names[rand(0, count($names) - 1)];
     $product->description = $descs[rand(0, count($descs) - 1)];
 
