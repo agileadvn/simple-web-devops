@@ -42,9 +42,9 @@ class ProductRepository {
 
   function getAllProductsFromDB() {
     $schema = 'agileadvn';
-    $username = 'agileadvn';
-    $password = 'agileadvn';
-    $this->dbConnection = new mysqli('mysql', $schema, $username, $password);
+    $usr = 'agileadvn';
+    $pwd = 'agileadvn';
+    $this->dbConnection = new mysqli('mysql', $schema, $usr, $pwd);
     if($this->dbConnection->connect_errno) {
       return null;
     }
