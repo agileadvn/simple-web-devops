@@ -9,9 +9,6 @@ class ProductRepository {
   }
 
   function __destruct() {
-    if ($this->dbConnection) {
-      //$this->dbConnection->close();
-    }
   }
 
   function getAllMockProducts() {
