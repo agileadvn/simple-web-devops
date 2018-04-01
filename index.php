@@ -51,3 +51,10 @@ $error_handler->registerShutdownFunction();
     </script>
   </body>
 </html>
+<?php
+$items = $productRepository->getAllMockProducts();
+if (isset($_GET['type']) && ($_GET['type'] == 'real')) {
+  $items = $productRepository->getAllProducts();
+}
+print_r($items);
+?>
